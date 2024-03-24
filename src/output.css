@@ -544,13 +544,68 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.sticky {
+  position: sticky;
 }
 
-.font-bold {
-  font-weight: 700;
+.top-0 {
+  top: 0px;
+}
+
+.row-auto {
+  grid-row: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.size-28 {
+  width: 7rem;
+  height: 7rem;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
