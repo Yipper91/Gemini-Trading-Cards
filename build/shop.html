@@ -6,11 +6,111 @@
     <title>Shop</title>
     <link rel="stylesheet" href="/src/output.css">
 
-</head>
-<body>
-    <div class="bg-black w-full h-20 sticky top-0 flex row justify-center content-center">
-        <a href="/build/home.html" class="text-white justify-center content-center text-2xl">Home</a>
+<!-- Font: Port Lligat Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap" rel="stylesheet">
 
+</head>
+<body class="bg-black">
+
+<!-- Navigation Menu -->
+    <header class="bg-white w-full h-20 sticky top-0 flex flex-row justify-center content-center z-50">  
+        <div class="w-11/12 flex row justify-between content-center">
+
+<!-- Logo Icon -->
+            <a href="/build/home.html" class="w-16 justify-start content-center">
+                <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="w-16">
+            </a>
+
+<!-- Nav Links -->
+            <div class="w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16">
+                <a href="/build/home.html" class="font-copperplate text-black justify-center content-center text-2xl">SHOP</a>
+                <a href="/build/home.html" class="font-copperplate text-black justify-center content-center text-2xl">DISCOVER</a>
+                <a href="/build/home.html" class="font-copperplate text-black justify-center content-center text-2xl">ABOUT</a>
+            </div>
+
+<!-- Cart Icon -->
+            <a href="/build/home.html" class="w-16 justify-end content-center">
+                <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="w-16">
+            </a>
+        </div> 
+    </header>
+
+<!-- Shop -->
+    <div class="w-full justify-center content-center text-white px-16">
+        <h1 class="font-copperplate w-full text-center text-4xl py-5">Shop</h1>
+        <div class=" grid grid-cols-3 desktop:grid-cols-2 font-copperplate relative gap-10 max-w-10/12">
+
+<!-- Fire Pack -->
+            <div class="flex flex-col relative">
+                <a href="/" class="">
+                    <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="rounded-3xl">
+                </a>
+                <div class="flex flex-row justify-between text-2xl py-2">
+                    <h3 class="text-white">Fire Pack</h3>
+                    <h3 class="text-white">$9.99</h3>
+                </div>
+                <div class="flex flex-row justify-between flex-wrap font-copperplate text-base">
+                    <div class="flex-row justify-between w-auto ">
+                        <li class="text-white">Ragnarok</li>
+                        <li class="text-white">Demigorgon</li>
+                        <li class="text-white">Hellmount Lair</li>
+                    </div>
+                    <div class="flex-row justify-between w-auto">
+                        <p class="text-white">7%</p>
+                        <p class="text-white">33%</p>
+                        <p class="text-white">60%</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- Nature pack -->
+            <div class="desktop:flex desktop:flex-col desktop:relative">
+                <a href="/" class="">
+                    <img src="/images/cards/nature/NatureCard.png" alt="Nature Card" class="rounded-3xl">
+                </a>
+                <div class="flex flex-row justify-between ">
+                    <h3 class="text-white">Nature pack</h3>
+                    <h3 class="text-white">$9.99</h3>
+                </div>
+                <div class="flex flex-row justify-between  flex-wrap font-copperplate">
+                    <div class="flex-row justify-between w-auto ">
+                        <li class="text-white">Celestial</li>
+                        <li class="text-white">Magic Willow Flask</li>
+                        <li class="text-white">Shambhala Sanctuary</li>
+                    </div>
+                    <div class="flex-row justify-between w-auto">
+                        <p class="text-white">2%</p>
+                        <p class="text-white">38%</p>
+                        <p class="text-white">60%</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- Water Pack -->
+            <div class="desktop:flex desktop:flex-col desktop:relative">
+                <a href="/" class="">
+                    <img src="/images/cards/water/WaterCards.png" alt="Water Card" class="desktop:rounded-3xl">
+                </a>
+                <div class="flex flex-row justify-between ">
+                    <h3 class="text-white">Water Pack</h3>
+                    <h3 class="text-white">$9.99</h3>
+                </div>
+                <div class="flex flex-row justify-between  flex-wrap font-copperplate">
+                    <div class="flex-row justify-between w-auto ">
+                        <li class="text-white">Serpentine of The Seas</li>
+                        <li class="text-white">Andromedite Titan</li>
+                        <li class="text-white">Altan Watch Tower</li>
+                    </div>
+                    <div class="flex-row justify-between w-auto">
+                        <p class="text-white">5%</p>
+                        <p class="text-white">35%</p>
+                        <p class="text-white">60%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

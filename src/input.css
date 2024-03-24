@@ -1,3 +1,10 @@
+@layer base {
+  @font-face {
+    font-family: 'copperplate';
+    src: url(/fonts/OPTICopperplate-Heavy.otf) format('opentype');
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
