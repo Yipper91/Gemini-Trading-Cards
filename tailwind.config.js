@@ -4,11 +4,12 @@ module.exports = {
   theme: {
     fontFamily: {
       copperplate: ["copperplate", "sans-serif"],
+      engraved: ["engraved", "sans-serif"],
       slab: ["slab", "sans-serif"],
     },
     screens: {
-      'tb': '460px',
-      'dk': '1024px'
+      'tb': '600px',
+      'dk': '1200px'
     },
     extend: {},
   },

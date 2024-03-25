@@ -3,6 +3,10 @@
     font-family: 'copperplate';
     src: url(/fonts/OPTICopperplate-Heavy.otf) format('opentype');
   }
+  @font-face {
+    font-family: 'engraved';
+    src: url(/fonts/AcademyEngravedLetPlain.ttf) format('truetype');
+  }
 }
 
 @tailwind base;
