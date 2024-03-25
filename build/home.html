@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="/src/buttons.css">
     <link rel="stylesheet" href="/src/logo-animate.css">
+    <link rel="stylesheet" href="/src/nav.css">
 
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,42 +16,52 @@
     
 </head>
 <body class="" id="bg-img">
+    <div class="fixed -z-10 w-full h-screen overflow-hidden flex flex-col justify-center content-center">
+        <div class="bg-[url('/images/Gemini-Home-2.png')] bg-center bg-cover relative h-screen dk:h-full dk:w-screen"></div>
+    </div>
 
 <!-- Navigation Menu -->
     <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
         <div class="w-11/12 h-10 tb:h-12 dk:h-16 relative flex row justify-between content-center">
-<!-- Logo Icon -->
+    <!-- Logo Icon -->
             <a href="/build/home.html" class="justify-start content-center">
                 <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="min-w-8 w-8 tb:w-10 dk:w-14">
             </a>
-
-<!-- Nav Links -->
+            
+    <!-- Nav Links -->
             <div class="scale-0 tb:scale-100 w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16 font-copperplate text-background tb:text-xl dk:text-2xl">
-                <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/home.html">
+                <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="btn-container" href="/build/home.html">
                     <span class="text-white" id="mas">HOME</span>
                     <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">HOME</button>
                 </a>
-                <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/discover.html">
+                <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="btn-container" href="/build/discover.html">
                     <span class="text-white" id="mas">DISCOVER</span>
                     <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">DISCOVER</button>
                 </a>
-                <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/shop.html">
+                <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="btn-container" href="/build/shop.html">
                     <span class="text-white" id="mas">SHOP</span>
                     <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">SHOP</button>
                 </a>
+                <a class="absolute invisible tb:visible dk:invisible h-full flex flex-col justify-center content-center text-xl" href="/build/home.html">GEMINI</a>
             </div>
 
-<!-- Cart & Burger -->
+    <!-- Cart & Burger -->
             <div class="h-full relative flex justify-center content-center">
-                <a href="/build/home.html" class="invisible tb:visible justify-end content-center">
+                <a href="/build/home.html" class="invisible dk:visible justify-end content-center">
                     <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="w-0 tb:w-10 dk:w-14">
                 </a>
-                <div id="burger" class="visible tb:invisible relative justify-center content-center">
-                    <img src="/images/burger/Burger-Black.png" alt="Hamburger Menu" class="w-6 min-w-6 tb:w-0">
+                <div class="visible dk:invisible relative justify-center content-center">
+                    <img id="burger" src="/images/burger/Burger-Black.png" alt="Hamburger Menu" class="w-6 min-w-6 tb:w-0">
                 </div>
             </div>
         </div> 
     </header>
+
+<!-- Dropdown Menu -->
+    <div id="dropBg" class="w-full h-screen fixed flex flex-row flex-wrap justify-evenly content-center font-copperplate  z-40">
+        <span class="" id="mas"></span>
+        <div class="bg-secondary bg-opacity-40 backdrop-blur-md text-background px-4 py-2" id='dropNav'></div>
+    </div>
 
 <!-- Gemini Logo Animation -->
     <div class="w-auto flex flex-col justify-center content-center">
@@ -64,7 +75,7 @@
                         stroke-linejoin: round;
                         stroke-dasharray: 300;
                         stroke-dashoffset: -600;
-                        animation: draw1 6s infinite both;
+                        animation: draw1 7s infinite both;
                         stroke-width: .5vh;
                     }
                     @keyframes draw1 {
@@ -89,11 +100,13 @@
     </div>
     <h1 class="text-white tb:text-5xl dk:text-7xl font-engraved w-full text-center">TRADING CARDS</h1>
     <div class="relative flex flex-row m-10">
-        <div class="border-2 border-solid border-white rounded-md font-copperplate text-md" id="btn-container">
+        <a class="border-2 border-solid border-white rounded-md font-copperplate text-md" id="btn-container" href="/build/shop.html">
             <span class="text-white" id="mas">Start Collecting</span>
             <button class="bg-white text-background px-4 py-2" id='btn' type="button" name="Hover">Start Collecting</button>
-        </div>
+        </a>
     </div>
+
+    <script src="/js/nav.js"></script>
 
 </body>
 </html>

@@ -17,20 +17,31 @@
 #btn {
     width: 101%;
     height: 100%;
-    -webkit-mask: url("/images/animation-bg-white.png");
-    mask: url("/images/animation-bg-white.png");
+    mask: url("/images/buttons/animation-bg-white.png");
     /* https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png */
-    -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border: none;
     cursor: pointer;
-    -webkit-animation: ani2 0.7s steps(22) forwards;
     animation: ani2 0.7s steps(22) forwards;
 }
 #btn:hover {
-    -webkit-animation: ani 0.7s steps(22) forwards;
     animation: ani 0.7s steps(22) forwards;
 }
+
+#btn2 {
+    width: 101%;
+    height: 100%;
+    mask: url("/images/buttons/animation-bg-black.png");
+    /* https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png */
+    mask-size: 2300% 100%;
+    border: none;
+    cursor: pointer;
+    animation: ani2 0.7s steps(22) forwards;
+}
+#btn2:hover {
+    animation: ani 0.7s steps(22) forwards;
+}
+
 #mas {
     position: absolute;
     height: 100%;
@@ -58,46 +69,38 @@
     font-weight: bold;
 }
 
-@-webkit-keyframes ani {
-    from {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
-    to {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
-}
-
 @keyframes ani {
     from {
-        -webkit-mask-position: 0 0;
         mask-position: 0 0;
     }
     to {
-        -webkit-mask-position: 100% 0;
         mask-position: 100% 0;
-    }
-}
-
-@-webkit-keyframes ani2 {
-    from {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
-    to {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
     }
 }
 
 @keyframes ani2 {
     from {
-        -webkit-mask-position: 100% 0;
         mask-position: 100% 0;
     }
     to {
-        -webkit-mask-position: 0 0;
         mask-position: 0 0;
+    }
+}
+
+@keyframes ani3 {
+    from {
+        mask-position: 100% 0;
+    }
+    to {
+        mask-position: 0% 0;
+    }
+}
+
+@keyframes ani4 {
+    from {
+        mask-position: 0 0;
+    }
+    to {
+        mask-position: 100% 0;
     }
 }

@@ -1,0 +1,29 @@
+#dropNav {
+    width: 101%;
+    height: 100%;
+    mask: url("/images/buttons/animation-bg-invert.png");
+    /* https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png */
+    mask-size: 2300% 100%;
+    border: none;
+}
+
+#dropBg {
+    visibility: hidden;}
+
+@keyframes drop {
+    from {
+        mask-position: 0 0;
+    }
+    to {
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes rise {
+    from {
+        mask-position: 100% 0;
+    }
+    to {
+        mask-position: 0 0;
+    }
+}
