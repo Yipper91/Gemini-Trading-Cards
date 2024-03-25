@@ -1,0 +1,11 @@
+#gemini {
+    display: block;
+    margin: auto;
+}
+
+#bg-img {
+    background-image: url("/images/Gemini-Home-2.png");
+    background-size: 100%;
+    background-position: 100% 30%;
+    width: 100%;
+}

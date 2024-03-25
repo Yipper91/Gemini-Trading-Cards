@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="/src/buttons.css">
 
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-black">
+<body class="bg-background">
 
 <!-- Navigation Menu -->
-    <header class="bg-white w-full sticky top-0 flex flex-row justify-center content-center z-50">  
+    <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
         <div class="w-11/12 h-10 tb:h-12 dk:h-16 relative flex row justify-between content-center">
 <!-- Logo Icon -->
             <a href="/build/home.html" class="justify-start content-center">
@@ -23,11 +24,20 @@
             </a>
 
 <!-- Nav Links -->
-            <div class="scale-0 tb:scale-100 w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16 font-copperplate text-black tb:text-xl dk:text-2xl">
-                <a href="/build/home.html" class="">HOME</a>
-                <a href="/build/home.html" class="">DISCOVER</a>
-                <a href="/build/home.html" class="">SHOP</a>
-            </div>
+<div class="scale-0 tb:scale-100 w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16 font-copperplate text-background tb:text-xl dk:text-2xl">
+    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/home.html">
+        <span class="text-white" id="mas">HOME</span>
+        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">HOME</button>
+    </a>
+    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/discover.html">
+        <span class="text-white" id="mas">DISCOVER</span>
+        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">DISCOVER</button>
+    </a>
+    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/shop.html">
+        <span class="text-white" id="mas">SHOP</span>
+        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">SHOP</button>
+    </a>
+</div>
 
 <!-- Cart & Burger -->
             <div class="h-full relative flex justify-center content-center">
@@ -43,15 +53,25 @@
 
 
 <!-- Shop -->
-    <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16">
+    <div class="w-full justify-center content-center text-accent px-2 tb:px-8 dk:px-16">
         <h1 class="font-copperplate w-full text-center text-4xl py-5">Shop</h1>
         <div class="w-full grid grid-cols-1 tb:grid-cols-2 dk:grid-cols-3 font-copperplate relative gap-10 max-w-none tb:max-w-10/12">
+            <!-- <div class="border-2 border-solid rounded-md font-copperplate text-md" id="btn-container">
+                <span class="text-accent" id="mas">Hello World</span>
+                <button class="bg-accent text-background px-4 py-2" id='btn' type="button" name="Hover">Hello World</button>
+            </div> -->
 
+            <!-- transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:opacity-75 -->
 <!-- Fire Pack -->
             <div class="w-full flex flex-col relative">
-                <a href="/" class="">
-                    <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100 transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:opacity-75">
-                </a>
+                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
+                    <span class="" id="card-mas">
+                        <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
+                    </span>
+                    <button class="" id='btn' type="button" name="Hover">
+                        <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
+                    </button>
+                </div>
                 <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
                     <h3>Fire Pack</h3>
                     <h3>$9.99</h3>
@@ -72,9 +92,14 @@
 
 <!-- Nature pack -->
             <div class="desktop:flex desktop:flex-col desktop:relative">
-                <a href="/" class="">
-                    <img src="/images/cards/nature/NatureCard.png" alt="Nature Card" class="rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100 transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:opacity-75">
-                </a>
+                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
+                    <span class="" id="card-mas">
+                        <img src="/images/cards/nature/NatureCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
+                    </span>
+                    <button class="" id='btn' type="button" name="Hover">
+                        <img src="/images/cards/nature/NatureCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
+                    </button>
+                </div>
                 <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
                     <h3>Nature Pack</h3>
                     <h3>$9.99</h3>
@@ -95,9 +120,14 @@
 
 <!-- Water Pack -->
             <div class="desktop:flex desktop:flex-col desktop:relative">
-                <a href="/" class="">
-                    <img src="/images/cards/water/WaterCards.png" alt="Water Card" class="rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100 transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:opacity-75">
-                </a>
+                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
+                    <span class="" id="card-mas">
+                        <img src="/images/cards/water/WaterCards.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
+                    </span>
+                    <button class="" id='btn' type="button" name="Hover">
+                        <img src="/images/cards/water/WaterCards.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
+                    </button>
+                </div>
                 <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
                     <h3>Water Pack</h3>
                     <h3>$9.99</h3>

@@ -11,7 +11,21 @@ module.exports = {
       'tb': '600px',
       'dk': '1200px'
     },
-    extend: {},
+    colors: {
+      transparent: 'transparent',
+      white: 'white',
+      black: 'black',
+      'primary': '#8EFFBB',
+      'secondary': '#DDD868',
+      'accent': '#DFDBB2',
+      'tertiary': '#BCA945',
+      'background': '#0F120C',
+    },
+    extend: {
+      // keyframes: {
+      //   'ani': {
+      //     'from': {mask-position: 0 0 -webkit-mask-position: 0 0},
+    },
   },
   plugins: [],
 }
