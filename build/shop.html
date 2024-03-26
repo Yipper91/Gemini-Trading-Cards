@@ -6,6 +6,7 @@
     <title>Shop</title>
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="/src/buttons.css">
+    <link rel="stylesheet" href="/src/nav.css">
 
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,52 +17,58 @@
 <body class="bg-background">
 
 <!-- Navigation Menu -->
-    <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
-        <div class="w-11/12 h-10 tb:h-12 dk:h-16 relative flex row justify-between content-center">
-<!-- Logo Icon -->
-            <a href="/build/home.html" class="justify-start content-center">
-                <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="min-w-8 w-8 tb:w-10 dk:w-14">
-            </a>
+<header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
+    <div class="w-11/12 h-10 tb:h-12 dk:h-16 relative flex row justify-between content-center">
 
+<!-- Logo Icon -->
+        <a href="/build/home.html" class="justify-start content-center">
+            <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="min-w-8 w-8 tb:w-10 dk:w-14">
+        </a>
+        
 <!-- Nav Links -->
-<div class="scale-0 tb:scale-100 w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16 font-copperplate text-background tb:text-xl dk:text-2xl">
-    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/home.html">
-        <span class="text-white" id="mas">HOME</span>
-        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">HOME</button>
-    </a>
-    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/discover.html">
-        <span class="text-white" id="mas">DISCOVER</span>
-        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">DISCOVER</button>
-    </a>
-    <a class="border-tertiary border-2 border-solid rounded-md" id="btn-container" href="/build/shop.html">
-        <span class="text-white" id="mas">SHOP</span>
-        <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">SHOP</button>
-    </a>
-</div>
+        <div class="scale-0 tb:scale-100 w-auto relative flex flex-row flex-wrap justify-evenly content-center gap-16 font-copperplate text-background dk:text-2xl">
+            <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="link-container" href="/build/home.html">
+                <span class="text-primary" id="mas">HOME</span>
+                <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">HOME</button>
+            </a>
+            <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="link-container" href="/build/discover.html">
+                <span class="text-primary" id="mas">DISCOVER</span>
+                <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">DISCOVER</button>
+            </a>
+            <a class="border-tertiary border-2 border-solid rounded-md invisible dk:visible" id="link-container" href="/build/shop.html">
+                <span class="text-primary" id="mas">SHOP</span>
+                <button class="bg-tertiary text-background" id='btn' type="button" name="Hover">SHOP</button>
+            </a>
+            <a class="absolute invisible tb:visible dk:invisible h-full flex flex-col justify-center content-center text-xl" href="/build/home.html">GEMINI</a>
+        </div>
 
 <!-- Cart & Burger -->
-            <div class="h-full relative flex justify-center content-center">
-                <a href="/build/home.html" class="invisible tb:visible justify-end content-center">
-                    <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="w-0 tb:w-10 dk:w-14">
-                </a>
-                <div id="burger" class="visible tb:invisible relative justify-center content-center">
-                    <img src="/images/burger/Burger-Black.png" alt="Hamburger Menu" class="w-6 min-w-6 tb:w-0">
-                </div>
+        <div class="h-full relative flex flex-col justify-center content-center min-w-8 w-6 tb:w-10 dk:w-14">
+            <a href="/build/home.html" class="relative invisible dk:visible justify-start content-center">
+                <img src="/images/logo/Gemini-Logo-black.png" alt="Gemini Logo" class="w-0 tb:w-10 dk:w-14">
+            </a>
+            <div class="visible dk:invisible absolute flex flex-row justify-center content-center">
+                <img id="burger" src="/images/burger/Burger-Black.png" alt="Hamburger Menu" class="w-6 min-w-6 tb:w-0">
             </div>
-        </div> 
-    </header>
+        </div>
+    </div> 
+</header>
 
+<!-- Dropdown Menu -->
+<div id="dropBg" class="w-full h-screen fixed flex flex-col flex-wrap justify-center content-center gap-16 z-40">
+    <span class="" id="mas"></span>
+    <div class="bg-tertiary bg-opacity-40 backdrop-blur-md flex flex-col flex-wrap justify-start content-start gap-10 font-copperplate text-primary tb:text-2xl" id='dropNav'>
+        <a class="w-full text-center mt-20" href="/build/home.html">HOME</a>
+        <a class="w-full text-center" href="/build/discover.html">DISCOVER</a>
+        <a class="w-full text-center" href="/build/shop.html">SHOP</a>
+    </div>
+</div>
 
 <!-- Shop -->
     <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16">
         <h1 class="font-copperplate w-full text-center text-4xl py-5">Shop</h1>
         <div class="w-full grid grid-cols-1 tb:grid-cols-2 dk:grid-cols-3 font-copperplate relative gap-10 max-w-none tb:max-w-10/12">
-            <!-- <div class="border-2 border-solid rounded-md font-copperplate text-md" id="btn-container">
-                <span class="text-accent" id="mas">Hello World</span>
-                <button class="bg-accent text-background px-4 py-2" id='btn' type="button" name="Hover">Hello World</button>
-            </div> -->
 
-            <!-- transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:opacity-75 -->
 <!-- Fire Pack -->
             <div class="w-full flex flex-col relative">
                 <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
@@ -94,10 +101,10 @@
             <div class="desktop:flex desktop:flex-col desktop:relative">
                 <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
                     <span class="" id="card-mas">
-                        <img src="/images/cards/nature/NatureCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
+                        <img src="/images/cards/nature/NatureCard.png" alt="NatureCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
                     </span>
                     <button class="" id='btn' type="button" name="Hover">
-                        <img src="/images/cards/nature/NatureCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
+                        <img src="/images/cards/nature/NatureCard.png" alt="NatureCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
                     </button>
                 </div>
                 <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
@@ -122,10 +129,10 @@
             <div class="desktop:flex desktop:flex-col desktop:relative">
                 <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
                     <span class="" id="card-mas">
-                        <img src="/images/cards/water/WaterCards.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
+                        <img src="/images/cards/water/WaterCard.png" alt="WaterCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
                     </span>
                     <button class="" id='btn' type="button" name="Hover">
-                        <img src="/images/cards/water/WaterCards.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
+                        <img src="/images/cards/water/WaterCard.png" alt="WaterCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
                     </button>
                 </div>
                 <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
@@ -147,5 +154,41 @@
             </div>
         </div>
     </div>
+
+<!-- Footer -->
+<footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
+    <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
+        <a href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
+        <div class="flex flex-row gap-8 tb:gap-12">
+            <a class="rounded-md" id="link-container" href="">
+                <span class="text-primary" id="mas">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
+                </span>
+                <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
+                </button>
+            </a>
+            <a class="rounded-md" id="link-container" href="">
+                <span class="text-primary" id="mas">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
+                </span>
+                <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
+                </button>
+            </a>
+            <a class="rounded-md" id="link-container" href="">
+                <span class="text-primary" id="mas">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
+                </span>
+                <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
+                </button>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Java Script Links -->
+    <script src="/js/nav.js"></script>
 </body>
 </html>

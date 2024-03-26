@@ -15,10 +15,10 @@ module.exports = {
       transparent: 'transparent',
       white: 'white',
       black: 'black',
-      'primary': '#8EFFBB',
+      'primary': '#82FFB4',
       'secondary': '#DDD868',
       'accent': '#DFDBB2',
-      'tertiary': '#BCA945',
+      'tertiary': '#74704E',
       'background': '#0F120C',
     },
     extend: {

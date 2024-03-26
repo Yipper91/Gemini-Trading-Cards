@@ -5,7 +5,12 @@
     margin-right: auto;
     overflow: hidden;
     transition: 0.5s;
+    border-color: white;
 }
+#btn-container:hover {
+    border-color: #82FFB4;
+}
+
 #card-container {
     position: relative;
     width: auto;
@@ -53,8 +58,8 @@
     width: 101%;
     position: absolute;
     overflow: hidden;
-    font-weight: bold;
 }
+
 #card-mas {
     position: absolute;
     height: 100%;
