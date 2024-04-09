@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="/src/buttons.css">
     <link rel="stylesheet" href="/src/logo-animate.css">
     <link rel="stylesheet" href="/src/nav.css">
+    
+<!-- Scroll Reveal CDN -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script>
+        ScrollReveal({ duration: 1000 });
+        ScrollReveal({ reset: true });
+    </script>
+
+<!-- Flickity & Flickity Fade ex. stylesheet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+
+<!-- Swup stylesheet & JS -->
+    <link rel="stylesheet" href="/src/swup.css">
+    <script type="module" src="/js/swup.js"></script>
 
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +31,7 @@
 
 </head>
 <body class="bg-background">
+
 <!-- Navigation Menu -->
     <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
         <div class="w-11/12 h-10 tb:h-12 dk:h-16 relative flex flex-row justify-between content-center">
@@ -69,8 +85,11 @@
         </div>
     </div>
 
+<!-- Page Load Container -->
+<main id="swup" class="transition-fade">
 
-    <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16">
+<!-- Discover -->
+    <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16 ">
         <h1 class="font-copperplate w-full text-center text-4xl py-5">Discover</h1>
         <div class="w-full grid grid-cols-1 tb:grid-cols-2 dk:grid-cols-4 font-copperplate relative gap-10 max-w-none tb:max-w-10/12">
             <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/FireCard.png" alt="Fire Pack">
@@ -87,40 +106,46 @@
             <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/SerpentineCard.png" alt="Serpentine of The Seas">
             <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AndromediteCard.png" alt="Andromedite titan">
             <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AltanCard.png" alt="Altan Watch Tower">
-
         </div>
     </div>
-
+</main>
+<div class="overlay transition-overlay"></div>
 
 <!-- Footer -->
     <footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
         <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
-            <a href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
+            <a id="footer1" href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
             <div class="flex flex-row gap-8 tb:gap-12">
-                <a class="rounded-md" id="link-container" href="">
-                    <span class="text-primary" id="mas">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
-                    </span>
-                    <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
-                    </button>
-                </a>
-                <a class="rounded-md" id="link-container" href="">
-                    <span class="text-primary" id="mas">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
-                    </span>
-                    <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
-                    </button>
-                </a>
-                <a class="rounded-md" id="link-container" href="">
-                    <span class="text-primary" id="mas">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
-                    </span>
-                    <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                        <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
-                    </button>
-                </a>
+                <div id="footer2" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer3" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a  class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer4" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -128,5 +153,14 @@
 <!-- Java Script Links -->
     <script src="/js/nav.js"></script>
 
+<!-- Flickity & Flickity Fade ex. JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+
+<!-- Flickity JS -->
+    <script src="/js/flickity.js"></script>
+
+<!-- Scroll Reveal JS -->
+    <script src="/js/scrollreveal.js"></script>
 </body>
 </html>

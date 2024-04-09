@@ -8,10 +8,74 @@
     <link rel="stylesheet" href="/src/buttons.css">
     <link rel="stylesheet" href="/src/nav.css">
 
+<!-- Scroll Reveal CDN -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script>
+        ScrollReveal({ duration: 1000 });
+        ScrollReveal({ reset: true });
+    </script>
+
+<!-- Flickity & Flickity Fade ex. JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+
+<!-- Flickity & Flickity Fade ex. stylesheet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+
+<!-- Swup stylesheet & JS -->
+    <link rel="stylesheet" href="/src/swup.css">
+    <script type="module" src="/js/swup.js"></script>
+
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap" rel="stylesheet">
+
+    <style>
+        @media (min-width:1200px) {
+            img {
+            max-width: 30vw;
+            }
+            .main-carousel {
+                max-width: 30vw;
+            }
+            .main-carousel2 {
+                max-width: 30vw;
+            }
+            .main-carousel3 {
+                max-width: 30vw;
+            }    
+        }
+        @media (min-width:600px) {
+            /* img {
+            max-width: 50vw;
+            } */
+            .main-carousel {
+                max-width: 50vw;
+            }
+            .main-carousel2 {
+                max-width: 50vw;
+            }
+            .main-carousel3 {
+                max-width: 50vw;
+            }    
+        }
+        @media (min-width:300px) {
+            /* img {
+            max-width: 50vw;
+            } */
+            .main-carousel {
+                max-width: 100vw;
+            }
+            .main-carousel2 {
+                max-width: 100vw;
+            }
+            .main-carousel3 {
+                max-width: 100vw;
+            }    
+        } 
+    </style>
 
 </head>
 <body class="bg-background">
@@ -64,6 +128,9 @@
     </div>
 </div>
 
+<!-- Page Load Container -->
+<main id="swup" class="transition-fade">
+
 <!-- Shop -->
     <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16">
         <h1 class="font-copperplate w-full text-center text-4xl py-5">Shop</h1>
@@ -71,124 +138,156 @@
 
 <!-- Fire Pack -->
             <div class="w-full flex flex-col relative">
-                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
-                    <span class="" id="card-mas">
-                        <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
-                    </span>
-                    <button class="" id='btn' type="button" name="Hover">
-                        <img src="/images/cards/fire/FireCard.png" alt="FireCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
-                    </button>
+                <div class="main-carousel">
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/FireCard.png" alt="Fire Pack">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/RagnarokCard.png" alt="Ragnarok">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/DemigorgonCard.png" alt="Demigorgon">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/HellmountCard.png" alt="Hellmount Lair">
+                    </div>
                 </div>
-                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
-                    <h3>Fire Pack</h3>
-                    <h3>$9.99</h3>
+                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2 mt-10">
+                    <h3 id="li0">Fire Pack</h3>
+                    <h3 id="li0">$9.99</h3>
                 </div>
                 <div class="flex flex-row justify-between flex-wrap font-copperplate text-xs dk:text-sm">
                     <div class="flex flex-col justify-between w-auto">
-                        <li>Ragnarok</li>
-                        <li>Demigorgon</li>
-                        <li>Hellmount Lair</li>
+                        <li id="li1">Ragnarok</li>
+                        <li id="li2">Demigorgon</li>
+                        <li id="li3">Hellmount Lair</li>
                     </div>
                     <div class="flex flex-col justify-end content-end">
-                        <p class="w-full flex flex-row justify-end content-end">7%</p>
-                        <p>33%</p>
-                        <p>60%</p>
+                        <p id="li1" class="w-full flex flex-row justify-end content-end">7%</p>
+                        <p id="li2">33%</p>
+                        <p id="li3">60%</p>
                     </div>
                 </div>
             </div>
 
 <!-- Nature pack -->
             <div class="desktop:flex desktop:flex-col desktop:relative">
-                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
-                    <span class="" id="card-mas">
-                        <img src="/images/cards/nature/NatureCard.png" alt="NatureCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
-                    </span>
-                    <button class="" id='btn' type="button" name="Hover">
-                        <img src="/images/cards/nature/NatureCard.png" alt="NatureCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
-                    </button>
+                <div class="main-carousel2">
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/NatureCard.png" alt="Nature Pack">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/CelestialCard.png" alt="Celestial">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/FlaskCard.png" alt="Magic Willow Flask">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/Shambhala Card.png" alt="Shambhala Sanctuary">
+                    </div>
                 </div>
-                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
-                    <h3>Nature Pack</h3>
-                    <h3>$9.99</h3>
+                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2 mt-10">
+                    <h3 id="li0">Nature Pack</h3>
+                    <h3 id="li0">$9.99</h3>
                 </div>
                 <div class="flex flex-row justify-between flex-wrap font-copperplate text-xs dk:text-sm">
                     <div class="flex flex-col justify-between w-auto">
-                        <li>Celestial</li>
-                        <li>Magic Willow Flask</li>
-                        <li>Shambhala Sanctuary</li>
+                        <li id="li1">Celestial</li>
+                        <li id="li2">Magic Willow Flask</li>
+                        <li id="li3">Shambhala Sanctuary</li>
                     </div>
                     <div class="flex flex-col justify-end content-end">
-                        <p class="w-full flex flex-row justify-end content-end">2%</p>
-                        <p>38%</p>
-                        <p>60%</p>
+                        <p id="li1" class="w-full flex flex-row justify-end content-end">2%</p>
+                        <p id="li2">38%</p>
+                        <p id="li3">60%</p>
                     </div>
                 </div>
             </div>
 
 <!-- Water Pack -->
             <div class="desktop:flex desktop:flex-col desktop:relative">
-                <div class="rounded-xl tb:rounded-2xl dk:rounded-3xl font-copperplate text-md" id="card-container">
-                    <span class="" id="card-mas">
-                        <img src="/images/cards/water/WaterCard.png" alt="WaterCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-50">
-                    </span>
-                    <button class="" id='btn' type="button" name="Hover">
-                        <img src="/images/cards/water/WaterCard.png" alt="WaterCard" class="w-full rounded-xl tb:rounded-2xl dk:rounded-3xl opacity-100">
-                    </button>
+                <div class="main-carousel3">
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/WaterCard.png" alt="Water Pack">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/SerpentineCard.png" alt="Serpentine of The Seas">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AndromediteCard.png" alt="Andromedite titan">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AltanCard.png" alt="Altan Watch Tower">
+                    </div>
                 </div>
-                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2">
-                    <h3>Water Pack</h3>
-                    <h3>$9.99</h3>
+                <div class="flex flex-row justify-between text-lg tb:text-xl dk:text-2xl py-2 mt-10">
+                    <h3 id="li0">Water Pack</h3>
+                    <h3 id="li0">$9.99</h3>
                 </div>
                 <div class="flex flex-row justify-between flex-wrap font-copperplate text-xs dk:text-sm">
                     <div class="flex flex-col justify-between w-auto">
-                        <li>Serpentine of The Seas</li>
-                        <li>Andromedite Titan</li>
-                        <li>Altan Watch Tower</li>
+                        <li id="li1">Serpentine of The Seas</li>
+                        <li id="li2">Andromedite Titan</li>
+                        <li id="li3">Altan Watch Tower</li>
                     </div>
                     <div class="flex flex-col justify-end content-end">
-                        <p class="w-full flex flex-row justify-end content-end">5%</p>
-                        <p>35%</p>
-                        <p>60%</p>
+                        <p id="li1" class="w-full flex flex-row justify-end content-end">5%</p>
+                        <p id="li2">35%</p>
+                        <p id="li3">60%</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</main>
 
 <!-- Footer -->
-<footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
-    <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
-        <a href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
-        <div class="flex flex-row gap-8 tb:gap-12">
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
-                </button>
-            </a>
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
-                </button>
-            </a>
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
-                </button>
-            </a>
+    <footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
+        <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
+            <a id="footer1" href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
+            <div class="flex flex-row gap-8 tb:gap-12">
+                <div id="footer2" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer3" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a  class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer4" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 <!-- Java Script Links -->
     <script src="/js/nav.js"></script>
+
+<!-- Scroll Reveal JS -->
+    <script src="/js/scrollreveal.js"></script>
+
+<!-- Flickity JS -->
+    <script src="/js/flickity.js"></script>
+
 </body>
 </html>

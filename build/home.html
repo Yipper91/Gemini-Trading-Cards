@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="/src/logo-animate.css">
     <link rel="stylesheet" href="/src/nav.css">
 
+<!-- Scroll Reveal CDN -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script>
+        ScrollReveal({ duration: 1000 });
+        ScrollReveal({ reset: true });
+    </script>
+
+<!-- Swup stylesheet & JS -->
+    <link rel="stylesheet" href="/src/swup.css">
+    <script type="module" src="/js/swup.js"></script>
+
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +27,6 @@
     
 </head>
 <body>
-
-<!-- Background Image -->
-    <div class="fixed -z-10 w-full h-screen overflow-hidden flex flex-col justify-center content-center">
-        <div class="bg-[url('/images/Gemini-Home-2.png')] bg-center bg-cover relative h-screen dk:h-full dk:w-screen"></div>
-    </div>
 
 <!-- Navigation Menu -->
     <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
@@ -75,6 +81,14 @@
         </div>
     </div>
 
+<!-- Page Load Container -->
+<main id="swup" class="transition-fade">
+
+    <!-- Background Image -->
+    <div class="fixed -z-10 w-full h-screen overflow-hidden flex flex-col justify-center content-center">
+        <div class="bg-[url('/images/Gemini-Home-2.png')] bg-center bg-cover relative h-screen dk:h-full dk:w-screen"></div>
+    </div>
+
 <!-- Gemini Logo Animation -->
     <div class="h-screen">
         <div class="mt-20 tb:mt-10 dk:mt-0 w-auto flex flex-col justify-center content-center">
@@ -119,42 +133,53 @@
             </a>
         </div>
     </div>
+</main>
+<div class="overlay transition-overlay"></div>
 
 <!-- Footer -->
-<footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
-    <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
-        <a href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
-        <div class="flex flex-row gap-8 tb:gap-12">
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
-                </button>
-            </a>
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
-                </button>
-            </a>
-            <a class="rounded-md" id="link-container" href="">
-                <span class="text-primary" id="mas">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
-                </span>
-                <button class="bg-background text-background" id='btn' type="button" name="Hover">
-                    <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
-                </button>
-            </a>
+    <footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
+        <div class="w-full tb:w-11/12 h-20 tb:h-20 dk:h-28 relative flex flex-col tb:flex-row justify-center tb:justify-between items-center">
+            <a id="footer1" href="/build/home.html" class="font-engraved text-lg tb:text-4xl dk:text-6xl font-medium transition dk:hover:duration-200 dk:hover:ease-in-out dk:hover:text-primary">GEMINI</a>
+            <div class="flex flex-row gap-8 tb:gap-12">
+                <div id="footer2" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/x.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer3" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a  class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/ig.png" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div id="footer4" class="w-4 tb:w-8 dk:w-10 flex justify-center content-center">
+                    <a class="rounded-md" id="link-container" href="">
+                        <span class="text-primary" id="mas">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb-hover.png" alt="">
+                        </span>
+                        <button class="bg-background text-background" id='btn' type="button" name="Hover">
+                            <img class="w-4 tb:w-8 dk:w-10" src="/images/social/fb.png" alt="">
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 <!-- Java Script Links -->
     <script src="/js/nav.js"></script>
+
+<!-- Scroll Reveal JS -->
+    <script src="/js/scrollreveal.js"></script>
 
 </body>
 </html>

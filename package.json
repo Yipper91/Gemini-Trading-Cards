@@ -4,5 +4,10 @@
   },
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "flickity": "^3.0.0",
+    "scrollreveal": "^4.0.9",
+    "swup": "^4.6.1"
   }
 }
