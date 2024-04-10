@@ -8,6 +8,14 @@
   "dependencies": {
     "flickity": "^3.0.0",
     "scrollreveal": "^4.0.9",
+    "smooth-scrollbar": "^8.8.4",
     "swup": "^4.6.1"
-  }
+  },
+  "name": "gemini-trading-cards",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

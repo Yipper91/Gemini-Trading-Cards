@@ -15,8 +15,10 @@
         ScrollReveal({ duration: 1000 });
         ScrollReveal({ reset: true });
     </script>
+<!-- Smooth Scrollbar -->
+    <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
 
-<!-- Flickity & Flickity Fade ex. stylesheet CDN -->
+<!-- Flickity & Flickity Fade CSS & CDN -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
 
@@ -24,13 +26,17 @@
     <link rel="stylesheet" href="/src/swup.css">
     <script type="module" src="/js/swup.js"></script>
 
+<!-- GSAP CDN & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 <!-- Font: Port Lligat Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-background">
+<body id="my-scrollbar" class="bg-background">
 
 <!-- Navigation Menu -->
     <header class="bg-tertiary w-full sticky top-0 flex flex-row justify-center content-center z-50">  
@@ -86,30 +92,31 @@
     </div>
 
 <!-- Page Load Container -->
-<main id="swup" class="transition-fade">
+    <main id="swup" class="transition-fade">
+    <div id="small-scroll">
+    <!-- Discover -->
+        <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16 ">
+            <h1 class="font-copperplate w-full text-center text-4xl py-5">Discover</h1>
+            <div class="w-full grid grid-cols-1 tb:grid-cols-2 dk:grid-cols-4 font-copperplate relative gap-10 max-w-none tb:max-w-10/12">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/FireCard.png" alt="Fire Pack">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/RagnarokCard.png" alt="Ragnarok">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/DemigorgonCard.png" alt="Demigorgon">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/HellmountCard.png" alt="Hellmount Lair">
 
-<!-- Discover -->
-    <div class="w-full justify-center content-center text-white px-2 tb:px-8 dk:px-16 ">
-        <h1 class="font-copperplate w-full text-center text-4xl py-5">Discover</h1>
-        <div class="w-full grid grid-cols-1 tb:grid-cols-2 dk:grid-cols-4 font-copperplate relative gap-10 max-w-none tb:max-w-10/12">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/FireCard.png" alt="Fire Pack">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/RagnarokCard.png" alt="Ragnarok">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/DemigorgonCard.png" alt="Demigorgon">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/fire/HellmountCard.png" alt="Hellmount Lair">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/NatureCard.png" alt="Nature Pack">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/CelestialCard.png" alt="Celestial">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/FlaskCard.png" alt="Magic Willow Flask">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/Shambhala Card.png" alt="Shambhala Sanctuary">
 
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/NatureCard.png" alt="Nature Pack">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/CelestialCard.png" alt="Celestial">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/FlaskCard.png" alt="Magic Willow Flask">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/nature/Shambhala Card.png" alt="Shambhala Sanctuary">
-
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/WaterCard.png" alt="Water Pack">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/SerpentineCard.png" alt="Serpentine of The Seas">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AndromediteCard.png" alt="Andromedite titan">
-            <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AltanCard.png" alt="Altan Watch Tower">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/WaterCard.png" alt="Water Pack">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/SerpentineCard.png" alt="Serpentine of The Seas">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AndromediteCard.png" alt="Andromedite titan">
+                <img class="rounded-xl tb:rounded-2xl dk:rounded-3xl" src="/images/cards/water/AltanCard.png" alt="Altan Watch Tower">
+            </div>
         </div>
     </div>
-</main>
-<div class="overlay transition-overlay"></div>
+    </main>
+    <div class="overlay transition-overlay"></div>
 
 <!-- Footer -->
     <footer class="bg-background text-white w-full absolute mb-0 flex flex-col tb:flex-row justify-center content-center z-50">
@@ -162,5 +169,20 @@
 
 <!-- Scroll Reveal JS -->
     <script src="/js/scrollreveal.js"></script>
+
+<!-- GSAP -->
+    <script src="/js/gsap.js"></script>
+
+<!-- Smooth Scrollbar -->
+    <!-- <script src="/js/smoothscroll.js"></script> -->
+    <script src="https://unpkg.com/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+        Scrollbar.init(document.querySelector('#my-scrollbar'));
+    </script>
+
+
+
 </body>
 </html>
